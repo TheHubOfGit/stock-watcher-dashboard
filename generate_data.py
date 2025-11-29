@@ -177,6 +177,45 @@ def calculate_cumulative_return(close_prices, period_str='1y'):
         return cumulative_return.dropna()
 
 
+def calculate_last_signal_date(fast_series, slow_series):
+    """Calculates the date when the fast EMA last crossed above the slow EMA."""
+    if fast_series.empty or slow_series.empty:
+        return None
+    
+    # Align series
+    common_index = fast_series.index.intersection(slow_series.index)
+    if common_index.empty:
+        return None
+    
+    fast = fast_series.loc[common_index]
+    slow = slow_series.loc[common_index]
+    
+    # Determine current signal
+    current_signal = 'Buy' if fast.iloc[-1] > slow.iloc[-1] else 'Sell'
+    
+    if current_signal == 'Sell':
+        return None
+        
+    # Find last crossover
+    # Create boolean series where Fast > Slow
+    signal_series = fast > slow
+    
+    # Find changes in signal
+    # True where signal changed from False to True or True to False
+    changes = signal_series.ne(signal_series.shift())
+    
+    # We are currently in a Buy state (True). We want the last time it became True.
+    # Filter for changes where the new state is True
+    buy_signals = changes & signal_series
+    
+    # Get the last date where this happened
+    if buy_signals.any():
+        last_buy_date = buy_signals[buy_signals].index[-1]
+        return last_buy_date.strftime('%Y-%m-%d')
+        
+    return None
+
+
 # Simplified process_asset_data - only essential data for static deployment
 def process_asset_simple(symbol, stock_data_raw, spy_1y_change=None):
     """Simplified asset processing for static deployment."""
@@ -239,9 +278,15 @@ def process_asset_simple(symbol, stock_data_raw, spy_1y_change=None):
         # Signals
         if result['ema13'] is not None and result['ema21'] is not None:
             result['ema_signal'] = 'Buy' if result['ema13'] > result['ema21'] else ('Sell' if result['ema13'] < result['ema21'] else 'Neutral')
+            # Calculate duration
+            if 'EMA13' in indicators.columns and 'EMA21' in indicators.columns:
+                 result['ema_short_last_buy_date'] = calculate_last_signal_date(indicators['EMA13'], indicators['EMA21'])
         
         if result['ema100'] is not None and result['ema200'] is not None:
             result['ema_long_signal'] = 'Buy' if result['ema100'] > result['ema200'] else ('Sell' if result['ema100'] < result['ema200'] else 'Neutral')
+            # Calculate duration
+            if 'EMA100' in indicators.columns and 'EMA200' in indicators.columns:
+                result['ema_long_last_buy_date'] = calculate_last_signal_date(indicators['EMA100'], indicators['EMA200'])
 
         # YTD change
         asset_1y_change = calculate_period_change(close_prices, '1y')
