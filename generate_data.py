@@ -282,6 +282,81 @@ def process_asset_simple(symbol, stock_data_raw, spy_1y_change=None):
                     result['zscore_1y_history_dates'] = zscore_1y.index.strftime('%Y-%m-%d').tolist()
                     result['zscore_1y_history_values'] = [round(float(v), 2) for v in zscore_1y.values.tolist()]
 
+        # Calculate drawdown
+        if len(close_prices) >= 2:
+            # Current drawdown from peak
+            peak_price = close_prices.max()
+            current_price = close_prices.iloc[-1]
+            if peak_price > 0:
+                result['current_drawdown_pct'] = ((current_price - peak_price) / peak_price) * 100
+            
+            # Drawdown history (1 year)
+            latest_date = close_prices.index[-1]
+            if latest_date.tzinfo is None:
+                latest_date = latest_date.tz_localize('UTC')
+            drawdown_start = get_start_date_from_period('1y', latest_date)
+            
+            close_idx_utc = close_prices.index.tz_localize('UTC') if close_prices.index.tz is None else close_prices.index
+            period_prices = close_prices[close_idx_utc >= drawdown_start]
+            
+            if len(period_prices) >= 2:
+                rolling_max = period_prices.expanding().max()
+                drawdown_series = ((period_prices - rolling_max) / rolling_max) * 100
+                result['drawdown_history_dates'] = drawdown_series.index.strftime('%Y-%m-%d').tolist()
+                result['drawdown_history_values'] = [round(float(v), 2) for v in drawdown_series.values.tolist()]
+
+        # EMA History (Short Signal: 13/21)
+        if 'EMA13' in indicators.columns and 'EMA21' in indicators.columns:
+            ema13_series = indicators['EMA13'].dropna()
+            ema21_series = indicators['EMA21'].dropna()
+            
+            if len(ema13_series) >= 2 and len(ema21_series) >= 2:
+                # Use EMA13 index as reference
+                latest_date = ema13_series.index[-1]
+                if latest_date.tzinfo is None:
+                    latest_date = latest_date.tz_localize('UTC')
+                ema_start = get_start_date_from_period('1y', latest_date)
+                
+                ema_idx_utc = ema13_series.index.tz_localize('UTC') if ema13_series.index.tz is None else ema13_series.index
+                
+                # Filter both series
+                ema13_1y = ema13_series[ema_idx_utc >= ema_start]
+                ema21_1y = ema21_series[ema_idx_utc >= ema_start] # Assuming same index alignment
+                
+                # Align indices (intersection)
+                common_dates = ema13_1y.index.intersection(ema21_1y.index)
+                
+                if not common_dates.empty:
+                    result['ema_1y_history_dates'] = common_dates.strftime('%Y-%m-%d').tolist()
+                    result['ema13_1y_history_values'] = [round(float(v), 2) for v in ema13_1y.loc[common_dates].values.tolist()]
+                    result['ema21_1y_history_values'] = [round(float(v), 2) for v in ema21_1y.loc[common_dates].values.tolist()]
+
+        # EMA Long History (Long Signal: 100/200)
+        if 'EMA100' in indicators.columns and 'EMA200' in indicators.columns:
+            ema100_series = indicators['EMA100'].dropna()
+            ema200_series = indicators['EMA200'].dropna()
+            
+            if len(ema100_series) >= 2 and len(ema200_series) >= 2:
+                # Use EMA100 index as reference
+                latest_date = ema100_series.index[-1]
+                if latest_date.tzinfo is None:
+                    latest_date = latest_date.tz_localize('UTC')
+                ema_start = get_start_date_from_period('1y', latest_date)
+                
+                ema_idx_utc = ema100_series.index.tz_localize('UTC') if ema100_series.index.tz is None else ema100_series.index
+                
+                # Filter both series
+                ema100_1y = ema100_series[ema_idx_utc >= ema_start]
+                ema200_1y = ema200_series[ema_idx_utc >= ema_start]
+                
+                # Align indices
+                common_dates = ema100_1y.index.intersection(ema200_1y.index)
+                
+                if not common_dates.empty:
+                    result['ema_long_1y_history_dates'] = common_dates.strftime('%Y-%m-%d').tolist()
+                    result['ema100_1y_history_values'] = [round(float(v), 2) for v in ema100_1y.loc[common_dates].values.tolist()]
+                    result['ema200_1y_history_values'] = [round(float(v), 2) for v in ema200_1y.loc[common_dates].values.tolist()]
+
         return result
     except Exception as e:
         print(f"Error processing {symbol}: {e}")
