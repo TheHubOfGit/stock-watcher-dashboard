@@ -298,7 +298,7 @@ class StockDashboard {
     }
 
     calculateDuration(signal, dateStr) {
-        if (signal !== 'Buy' || !dateStr) return '';
+        if (!signal || !dateStr) return '';
         try {
             const date = new Date(dateStr);
             const now = new Date();

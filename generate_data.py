@@ -178,7 +178,7 @@ def calculate_cumulative_return(close_prices, period_str='1y'):
 
 
 def calculate_last_signal_date(fast_series, slow_series):
-    """Calculates the date when the fast EMA last crossed above the slow EMA."""
+    """Calculates the date when the current signal (Buy or Sell) started."""
     if fast_series.empty or slow_series.empty:
         return None
     
@@ -193,25 +193,24 @@ def calculate_last_signal_date(fast_series, slow_series):
     # Determine current signal
     current_signal = 'Buy' if fast.iloc[-1] > slow.iloc[-1] else 'Sell'
     
-    if current_signal == 'Sell':
-        return None
-        
-    # Find last crossover
-    # Create boolean series where Fast > Slow
-    signal_series = fast > slow
+    # Create boolean series for the signal condition
+    if current_signal == 'Buy':
+        signal_series = fast > slow
+    else:
+        signal_series = fast < slow
     
     # Find changes in signal
     # True where signal changed from False to True or True to False
     changes = signal_series.ne(signal_series.shift())
     
-    # We are currently in a Buy state (True). We want the last time it became True.
-    # Filter for changes where the new state is True
-    buy_signals = changes & signal_series
+    # We want the last time the condition became True (start of current signal)
+    # Filter for changes where the new state is True (meaning the signal condition started)
+    signal_starts = changes & signal_series
     
     # Get the last date where this happened
-    if buy_signals.any():
-        last_buy_date = buy_signals[buy_signals].index[-1]
-        return last_buy_date.strftime('%Y-%m-%d')
+    if signal_starts.any():
+        last_date = signal_starts[signal_starts].index[-1]
+        return last_date.strftime('%Y-%m-%d')
         
     return None
 
