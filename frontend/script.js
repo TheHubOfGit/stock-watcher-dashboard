@@ -574,6 +574,9 @@ class StockDashboard {
                     mode: 'index',
                     intersect: false,
                 },
+                animation: {
+                    duration: 500
+                },
                 plugins: {
                     legend: {
                         display: false
@@ -666,6 +669,9 @@ class StockDashboard {
                 interaction: {
                     mode: 'index',
                     intersect: false,
+                },
+                animation: {
+                    duration: 500
                 },
                 plugins: {
                     legend: {
