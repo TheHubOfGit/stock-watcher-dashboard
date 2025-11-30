@@ -402,6 +402,7 @@ th.desc .sort-icon::after {
     z-index: 100;
     padding: 1.5rem;
     animation: fadeIn 0.2s ease-out;
+    pointer-events: none;
 }
 
 .chart-popup.active {
