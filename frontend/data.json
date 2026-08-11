@@ -4,14 +4,14 @@
       "name": "SPY",
       "display_name": "SPY",
       "type": "SPY",
-      "latest_price": 770.5900268554688,
-      "daily_change_pct": -0.3156413527202305,
-      "ema13": 761.4605629061027,
-      "ema21": 756.5493361081492,
-      "rsi14": 61.876865456837685,
-      "ema100": 731.4544142424913,
-      "ema200": 705.8409519659227,
-      "z_score_100": 1.2217549479313987,
+      "latest_price": 770.5599975585938,
+      "daily_change_pct": -0.31952597501650964,
+      "ema13": 761.4562730065492,
+      "ema21": 756.5466061720697,
+      "rsi14": 61.827827762002315,
+      "ema100": 731.4538196029494,
+      "ema200": 705.8406531669489,
+      "z_score_100": 1.2209961786869716,
       "ema_signal": "Buy",
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-08-03",
@@ -47,7 +47,7 @@
         768.5599975585938,
         773.260009765625,
         773.030029296875,
-        770.5900268554688
+        770.5599975585938
       ],
       "asset_1y_history_dates": [
         "2026-01-02",
@@ -1091,7 +1091,7 @@
         66.14,
         66.14,
         66.14,
-        61.88
+        61.83
       ],
       "zscore_1y_history_dates": [
         "2025-08-11",
@@ -4317,7 +4317,7 @@
         -0.03,
         -0.35
       ],
-      "current_drawdown_pct": -0.3452891493723465
+      "current_drawdown_pct": -0.3491726163169389
     },
     "^DJI": {
       "name": "^DJI",
@@ -4335,7 +4335,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-04-10",
       "ema_long_last_buy_date": "2023-04-06",
-      "relative_perf_1y": -1.084208303619608,
+      "relative_perf_1y": -1.079804664244378,
       "sparkline_data": [
         52319.19921875,
         52305.23828125,
@@ -8654,7 +8654,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-08-03",
       "ema_long_last_buy_date": "2023-05-08",
-      "relative_perf_1y": -0.10839317685519312,
+      "relative_perf_1y": -0.10398953747996309,
       "sparkline_data": [
         7499.35986328125,
         7483.22998046875,
@@ -12961,19 +12961,19 @@
       "name": "^VIX",
       "display_name": "VIX (Volatility)",
       "type": "VIX (Volatility)",
-      "latest_price": 15.270000457763672,
-      "daily_change_pct": -1.2289752905205946,
-      "ema13": 16.17122804978831,
-      "ema21": 16.546877992311128,
-      "rsi14": 36.84785693813838,
-      "ema100": 17.86607575273252,
-      "ema200": 18.286533176937226,
-      "z_score_100": -1.1564417553182,
+      "latest_price": 15.279999732971191,
+      "daily_change_pct": -1.1642969258191282,
+      "ema13": 16.1726565176751,
+      "ema21": 16.54778701732999,
+      "rsi14": 36.900331196190436,
+      "ema100": 17.866273758182174,
+      "ema200": 18.286632672212924,
+      "z_score_100": -1.1524289979627662,
       "ema_signal": "Sell",
       "ema_long_signal": "Sell",
       "ema_short_last_buy_date": "2026-08-03",
       "ema_long_last_buy_date": "2026-06-22",
-      "relative_perf_1y": -10.862525730968228,
+      "relative_perf_1y": -10.791237306742884,
       "sparkline_data": [
         16.450000762939453,
         16.59000015258789,
@@ -13004,7 +13004,7 @@
         15.149999618530273,
         14.899999618530273,
         15.460000038146973,
-        15.270000457763672
+        15.279999732971191
       ],
       "asset_1y_history_dates": [
         "2026-01-02",
@@ -13314,7 +13314,7 @@
         1.34,
         -0.33,
         3.41,
-        2.14
+        2.21
       ],
       "rsi_1y_history_dates": [
         "2025-08-11",
@@ -14050,7 +14050,7 @@
         37.87,
         37.87,
         37.87,
-        36.85
+        36.9
       ],
       "zscore_1y_history_dates": [
         "2025-08-11",
@@ -14560,7 +14560,7 @@
         -1.27,
         -1.34,
         -1.1,
-        -1.16
+        -1.15
       ],
       "ema_1y_history_dates": [
         "2025-08-11",
@@ -17278,9 +17278,9 @@
         -51.21,
         -52.01,
         -50.21,
-        -50.82
+        -50.79
       ],
-      "current_drawdown_pct": -70.81979758559487
+      "current_drawdown_pct": -70.80068947388524
     }
   },
   "asset_data": {
@@ -17300,7 +17300,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-08-03",
       "ema_long_last_buy_date": "2025-05-15",
-      "relative_perf_1y": -5.578527644367037,
+      "relative_perf_1y": -5.574124004991807,
       "sparkline_data": [
         216.47000122070312,
         218.5800018310547,
@@ -21619,7 +21619,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-07-27",
       "ema_long_last_buy_date": "2026-04-14",
-      "relative_perf_1y": 23.292311184162227,
+      "relative_perf_1y": 23.296714823537457,
       "sparkline_data": [
         143.10000610351562,
         147.30999755859375,
@@ -25938,7 +25938,7 @@
       "ema_long_signal": "Sell",
       "ema_short_last_buy_date": "2026-06-26",
       "ema_long_last_buy_date": "2026-04-09",
-      "relative_perf_1y": -18.19651298270917,
+      "relative_perf_1y": -18.19210934333394,
       "sparkline_data": [
         114.18000030517578,
         121.62999725341797,
@@ -30257,7 +30257,7 @@
       "ema_long_signal": "Sell",
       "ema_short_last_buy_date": "2026-07-06",
       "ema_long_last_buy_date": "2025-06-20",
-      "relative_perf_1y": -28.605007215043237,
+      "relative_perf_1y": -28.600603575668007,
       "sparkline_data": [
         122.41999816894531,
         130.27000427246094,
@@ -34576,7 +34576,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-07-17",
       "ema_long_last_buy_date": "2026-01-30",
-      "relative_perf_1y": 31.069954380742768,
+      "relative_perf_1y": 31.074358020117998,
       "sparkline_data": [
         15.039999961853027,
         15.0,
@@ -38895,7 +38895,7 @@
       "ema_long_signal": "Sell",
       "ema_short_last_buy_date": "2026-07-31",
       "ema_long_last_buy_date": "2026-01-13",
-      "relative_perf_1y": -47.30033526870771,
+      "relative_perf_1y": -47.295931629332486,
       "sparkline_data": [
         146.19000244140625,
         159.24000549316406,
@@ -43214,7 +43214,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-06-24",
       "ema_long_last_buy_date": "2026-05-18",
-      "relative_perf_1y": -17.896310353092392,
+      "relative_perf_1y": -17.891906713717162,
       "sparkline_data": [
         184.7899932861328,
         181.9199981689453,
@@ -47533,7 +47533,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-07-27",
       "ema_long_last_buy_date": "2025-07-25",
-      "relative_perf_1y": 108.47626914635394,
+      "relative_perf_1y": 108.48067278572917,
       "sparkline_data": [
         580.9099731445312,
         540.8800048828125,
@@ -51852,7 +51852,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-08-05",
       "ema_long_last_buy_date": "2023-02-24",
-      "relative_perf_1y": 3.6189855907247477,
+      "relative_perf_1y": 3.6233892300999777,
       "sparkline_data": [
         200.08999633789062,
         197.5800018310547,
@@ -56171,7 +56171,7 @@
       "ema_long_signal": "Sell",
       "ema_short_last_buy_date": "2026-08-04",
       "ema_long_last_buy_date": "2026-05-21",
-      "relative_perf_1y": -14.583868961230499,
+      "relative_perf_1y": -14.579465321855269,
       "sparkline_data": [
         116.66999816894531,
         125.7300033569336,
@@ -60490,7 +60490,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-08-06",
       "ema_long_last_buy_date": "2026-02-23",
-      "relative_perf_1y": 21.746931273699996,
+      "relative_perf_1y": 21.751334913075226,
       "sparkline_data": [
         1042.3900146484375,
         1013.6199951171875,
@@ -64809,7 +64809,7 @@
       "ema_long_signal": "Sell",
       "ema_short_last_buy_date": "2026-08-05",
       "ema_long_last_buy_date": "2026-02-24",
-      "relative_perf_1y": -22.003611987819564,
+      "relative_perf_1y": -21.999208348444334,
       "sparkline_data": [
         96.25,
         95.70999908447266,
@@ -69128,7 +69128,7 @@
       "ema_long_signal": "Sell",
       "ema_short_last_buy_date": "2026-07-28",
       "ema_long_last_buy_date": "2026-07-06",
-      "relative_perf_1y": -6.09536279314837,
+      "relative_perf_1y": -6.09095915377314,
       "sparkline_data": [
         24.079999923706055,
         23.8799991607666,
@@ -73447,7 +73447,7 @@
       "ema_long_signal": "Sell",
       "ema_short_last_buy_date": "2026-08-10",
       "ema_long_last_buy_date": "2022-04-25",
-      "relative_perf_1y": -24.97210847995968,
+      "relative_perf_1y": -24.967704840584453,
       "sparkline_data": [
         2.309999942779541,
         2.319999933242798,
@@ -77766,7 +77766,7 @@
       "ema_long_signal": "Sell",
       "ema_short_last_buy_date": "2026-07-13",
       "ema_long_last_buy_date": "2026-07-30",
-      "relative_perf_1y": -38.99917446525552,
+      "relative_perf_1y": -38.994770825880295,
       "sparkline_data": [
         420.6000061035156,
         425.29998779296875,
@@ -82085,7 +82085,7 @@
       "ema_long_signal": "Sell",
       "ema_short_last_buy_date": "2026-07-28",
       "ema_long_last_buy_date": "2026-02-12",
-      "relative_perf_1y": -8.828232464906922,
+      "relative_perf_1y": -8.823828825531692,
       "sparkline_data": [
         373.0199890136719,
         384.2799987792969,
@@ -86404,7 +86404,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-08-04",
       "ema_long_last_buy_date": "2025-06-27",
-      "relative_perf_1y": -3.697704077808323,
+      "relative_perf_1y": -3.693300438433093,
       "sparkline_data": [
         353.3299865722656,
         357.8900146484375,
@@ -90723,7 +90723,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-08-03",
       "ema_long_last_buy_date": "2026-04-13",
-      "relative_perf_1y": 4.954709143022587,
+      "relative_perf_1y": 4.959112782397817,
       "sparkline_data": [
         238.33999633789062,
         241.6999969482422,
@@ -95042,7 +95042,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-08-07",
       "ema_long_last_buy_date": "2025-08-29",
-      "relative_perf_1y": -0.8459983634470625,
+      "relative_perf_1y": -0.8415947240718324,
       "sparkline_data": [
         289.3599853515625,
         294.3800048828125,
@@ -99356,12 +99356,12 @@
       "rsi14": 49.37584747752511,
       "ema100": 340.03365482719107,
       "ema200": 334.80571473625736,
-      "z_score_100": 1.4918797165227897,
+      "z_score_100": 1.491879716522789,
       "ema_signal": "Buy",
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-06-16",
       "ema_long_last_buy_date": "2026-07-14",
-      "relative_perf_1y": -9.549998362206736,
+      "relative_perf_1y": -9.545594722831506,
       "sparkline_data": [
         343.0899963378906,
         351.0799865722656,
@@ -103680,7 +103680,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-08-03",
       "ema_long_last_buy_date": "2024-09-13",
-      "relative_perf_1y": -0.04467431765786145,
+      "relative_perf_1y": -0.04027067828263142,
       "sparkline_data": [
         135.99000549316406,
         135.1300048828125,
@@ -107999,7 +107999,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-07-30",
       "ema_long_last_buy_date": "2025-08-08",
-      "relative_perf_1y": 17.270779305174543,
+      "relative_perf_1y": 17.275182944549773,
       "sparkline_data": [
         93.66000366210938,
         93.05999755859375,
@@ -112318,7 +112318,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-07-13",
       "ema_long_last_buy_date": "2025-07-03",
-      "relative_perf_1y": 64.38369370170432,
+      "relative_perf_1y": 64.38809734107954,
       "sparkline_data": [
         640.760009765625,
         599.7000122070312,
@@ -116637,7 +116637,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-08-04",
       "ema_long_last_buy_date": "2025-06-27",
-      "relative_perf_1y": 19.88762885417501,
+      "relative_perf_1y": 19.89203249355024,
       "sparkline_data": [
         270.6700134277344,
         269.989990234375,
@@ -120956,7 +120956,7 @@
       "ema_long_signal": "Buy",
       "ema_short_last_buy_date": "2026-08-10",
       "ema_long_last_buy_date": "2025-06-27",
-      "relative_perf_1y": 25.578177448384007,
+      "relative_perf_1y": 25.582581087759237,
       "sparkline_data": [
         81.0,
         77.45999908447266,
@@ -125263,19 +125263,19 @@
       "name": "BTC-USD",
       "display_name": "BTC-USD",
       "type": "Crypto",
-      "latest_price": 63572.7890625,
-      "daily_change_pct": -0.5285460460812255,
-      "ema13": 64175.794366253904,
-      "ema21": 64143.36627088243,
-      "rsi14": 46.38570314914445,
-      "ema100": 66736.31524614905,
-      "ema200": 72096.88097209184,
-      "z_score_100": -0.575471378330029,
+      "latest_price": 63598.1796875,
+      "daily_change_pct": -0.48881769024228794,
+      "ema13": 64179.42159839676,
+      "ema21": 64145.674509518794,
+      "rsi14": 46.527835430026194,
+      "ema100": 66736.81803080252,
+      "ema200": 72097.13361512666,
+      "z_score_100": -0.5714282126566245,
       "ema_signal": "Buy",
       "ema_long_signal": "Sell",
       "ema_short_last_buy_date": "2026-08-06",
       "ema_long_last_buy_date": "2025-11-28",
-      "relative_perf_1y": -41.357143099703904,
+      "relative_perf_1y": -41.324124496763005,
       "sparkline_data": [
         62239.12109375,
         64956.11328125,
@@ -125306,7 +125306,7 @@
         64904.6875,
         64844.88671875,
         63910.5859375,
-        63572.7890625
+        63598.1796875
       ],
       "asset_1y_history_dates": [
         "2026-01-01",
@@ -125756,7 +125756,7 @@
         -26.85,
         -26.92,
         -27.97,
-        -28.35
+        -28.33
       ],
       "rsi_1y_history_dates": [
         "2025-08-11",
@@ -126492,7 +126492,7 @@
         54.65,
         54.25,
         48.35,
-        46.39
+        46.53
       ],
       "zscore_1y_history_dates": [
         "2025-08-11",
@@ -127228,7 +127228,7 @@
         -0.41,
         -0.41,
         -0.54,
-        -0.58
+        -0.57
       ],
       "ema_1y_history_dates": [
         "2025-08-11",
@@ -127964,7 +127964,7 @@
         64252.64,
         64337.25,
         64276.3,
-        64175.79
+        64179.42
       ],
       "ema21_1y_history_values": [
         116451.77,
@@ -128332,7 +128332,7 @@
         64167.86,
         64229.41,
         64200.42,
-        64143.37
+        64145.67
       ],
       "ema_long_1y_history_dates": [
         "2025-08-11",
@@ -129068,7 +129068,7 @@
         66899.28,
         66858.6,
         66800.22,
-        66736.32
+        66736.82
       ],
       "ema200_1y_history_values": [
         101832.82,
@@ -129436,7 +129436,7 @@
         72340.27,
         72265.69,
         72182.55,
-        72096.88
+        72097.13
       ],
       "drawdown_history_dates": [
         "2025-08-11",
@@ -130172,27 +130172,27 @@
         -47.97,
         -48.02,
         -48.77,
-        -49.04
+        -49.02
       ],
-      "current_drawdown_pct": -49.04088243700466
+      "current_drawdown_pct": -49.020529643561844
     },
     "LTC-USD": {
       "name": "LTC-USD",
       "display_name": "LTC-USD",
       "type": "Crypto",
-      "latest_price": 45.4900016784668,
-      "daily_change_pct": 0.8404348383097776,
-      "ema13": 45.37195757696935,
-      "ema21": 45.38303077629106,
-      "rsi14": 50.88353432493778,
-      "ema100": 47.84461617169162,
-      "ema200": 54.70142558233416,
-      "z_score_100": -0.3800162669587043,
+      "latest_price": 45.470001220703125,
+      "daily_change_pct": 0.7960986153280885,
+      "ema13": 45.3691003687174,
+      "ema21": 45.381212552857995,
+      "rsi14": 50.74192210627842,
+      "ema100": 47.84422012302303,
+      "ema200": 54.701226572804174,
+      "z_score_100": -0.3842411456872354,
       "ema_signal": "Sell",
       "ema_long_signal": "Sell",
       "ema_short_last_buy_date": "2026-08-02",
       "ema_long_last_buy_date": "2025-11-22",
-      "relative_perf_1y": -56.02926286584574,
+      "relative_perf_1y": -56.0499087043253,
       "sparkline_data": [
         43.48879623413086,
         45.43452453613281,
@@ -130223,7 +130223,7 @@
         45.98006057739258,
         45.403289794921875,
         45.11087417602539,
-        45.4900016784668
+        45.470001220703125
       ],
       "asset_1y_history_dates": [
         "2026-01-01",
@@ -130673,7 +130673,7 @@
         -42.41,
         -43.13,
         -43.5,
-        -43.03
+        -43.05
       ],
       "rsi_1y_history_dates": [
         "2025-08-11",
@@ -131409,7 +131409,7 @@
         54.41,
         50.12,
         48.05,
-        50.88
+        50.74
       ],
       "zscore_1y_history_dates": [
         "2025-08-11",
@@ -135089,9 +135089,9 @@
         -64.89,
         -65.33,
         -65.56,
-        -65.27
+        -65.28
       ],
-      "current_drawdown_pct": -83.63713191909767
+      "current_drawdown_pct": -83.6443261340871
     }
   },
   "spy_1y_history": {
@@ -135404,5 +135404,5 @@
       13.0
     ]
   },
-  "generated_at": "2026-08-11T20:24:44.325586+00:00"
+  "generated_at": "2026-08-11T21:22:23.263268+00:00"
 }
